@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>6D54D28C-43DC-4726-855B-FD76445691D3</string>
+	<key>IDESourceControlProjectName</key>
+	<string>Expenses</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DF1CB47CCF06F27898254A788EF16EEF8E9BAF7D</key>
+		<string>https://github.com/zorn/Expenses.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>_FINAL/Expenses.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DF1CB47CCF06F27898254A788EF16EEF8E9BAF7D</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/zorn/Expenses.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DF1CB47CCF06F27898254A788EF16EEF8E9BAF7D</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DF1CB47CCF06F27898254A788EF16EEF8E9BAF7D</string>
+			<key>IDESourceControlWCCName</key>
+			<string>Expenses</string>
+		</dict>
+	</array>
+</dict>
+</plist>
