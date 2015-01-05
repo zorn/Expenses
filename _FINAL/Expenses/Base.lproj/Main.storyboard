@@ -2,8 +2,92 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="72Y-ZB-Qfx">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
+        <!--New Expense-->
+        <scene sceneID="d08-p8-woe">
+            <objects>
+                <tableViewController id="9AR-Jc-Jlo" customClass="NewExpenseViewController" customModule="Expenses" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="grouped" separatorStyle="default" rowHeight="44" sectionHeaderHeight="10" sectionFooterHeight="10" id="EDD-UB-3m7">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <sections>
+                            <tableViewSection id="Cnc-E6-xcc">
+                                <cells>
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="44" id="TJi-0t-c2Y">
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="TJi-0t-c2Y" id="eWP-xN-o0i">
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Pb-6E-sQt">
+                                                    <rect key="frame" x="8" y="11" width="51" height="21"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DLO-Vl-0Wc">
+                                                    <rect key="frame" x="67" y="7" width="525" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="DLO-Vl-0Wc" firstAttribute="centerY" secondItem="7Pb-6E-sQt" secondAttribute="centerY" constant="0.5" id="0QQ-PG-qyN"/>
+                                                <constraint firstItem="7Pb-6E-sQt" firstAttribute="leading" secondItem="eWP-xN-o0i" secondAttribute="leadingMargin" id="JCo-xH-F6w"/>
+                                                <constraint firstAttribute="bottom" secondItem="DLO-Vl-0Wc" secondAttribute="bottom" constant="6" id="UDP-zv-5G5"/>
+                                                <constraint firstAttribute="trailing" secondItem="DLO-Vl-0Wc" secondAttribute="trailing" constant="8" id="YXl-jB-Evl"/>
+                                                <constraint firstAttribute="centerY" secondItem="7Pb-6E-sQt" secondAttribute="centerY" id="cBA-2y-WRI"/>
+                                                <constraint firstItem="DLO-Vl-0Wc" firstAttribute="top" secondItem="eWP-xN-o0i" secondAttribute="top" constant="7" id="hvz-hx-wxP"/>
+                                                <constraint firstItem="DLO-Vl-0Wc" firstAttribute="leading" secondItem="7Pb-6E-sQt" secondAttribute="trailing" constant="8" id="sZa-Oq-AD0"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </cells>
+                            </tableViewSection>
+                        </sections>
+                        <connections>
+                            <outlet property="dataSource" destination="9AR-Jc-Jlo" id="ZQK-Jk-jSh"/>
+                            <outlet property="delegate" destination="9AR-Jc-Jlo" id="Asq-8S-9l8"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" title="New Expense" id="0Uw-K5-BGa">
+                        <barButtonItem key="leftBarButtonItem" title="Cancel" id="OhT-8D-K2q">
+                            <connections>
+                                <action selector="cancel:" destination="9AR-Jc-Jlo" id="86J-tc-XRd"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="OS2-sA-wVM">
+                            <connections>
+                                <action selector="save:" destination="9AR-Jc-Jlo" id="3Kp-RG-BDy"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="nameTextField" destination="DLO-Vl-0Wc" id="xK5-oI-ncL"/>
+                    </connections>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JIb-bL-Vur" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2472" y="460"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Df2-TY-C6H">
+            <objects>
+                <navigationController id="bpm-EU-8SP" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="v6a-Rz-GjL">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="9AR-Jc-Jlo" kind="relationship" relationship="rootViewController" id="QnA-T5-ddh"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FB3-m7-y13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1737" y="460"/>
+        </scene>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
@@ -28,7 +112,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1711" y="842"/>
+            <point key="canvasLocation" x="1737" y="1224"/>
         </scene>
         <!--Expenses-->
         <scene sceneID="Jz2-bm-XOE">
@@ -62,7 +146,13 @@
                             <outlet property="delegate" destination="Kas-mL-nik" id="odL-il-Lft"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Expenses" id="WNF-9o-yrO"/>
+                    <navigationItem key="navigationItem" title="Expenses" id="WNF-9o-yrO">
+                        <barButtonItem key="rightBarButtonItem" title="New" id="u1w-B3-xpj">
+                            <connections>
+                                <segue destination="bpm-EU-8SP" kind="presentation" id="VXX-lK-cKf"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UiF-9U-31G" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
