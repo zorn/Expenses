@@ -14,7 +14,8 @@ class ExpenseListViewController : UITableViewController, UITableViewDataSource, 
         if let cell = tableView.dequeueReusableCellWithIdentifier(cellReuseID) as? UITableViewCell {
             return self.configureCell(cell, indexPath: indexPath)
         } else {
-            return UITableViewCell(style: .Default, reuseIdentifier: cellReuseID);
+            let newCell = UITableViewCell(style: .Default, reuseIdentifier: cellReuseID);
+            return self.configureCell(newCell, indexPath: indexPath)
         }
     }
     
