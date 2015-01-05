@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1A50049A1A5A200600424EA6 /* ExpenseListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A5004991A5A200600424EA6 /* ExpenseListViewController.swift */; };
 		1AA319511A5A1D0D00447D2C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA319501A5A1D0D00447D2C /* AppDelegate.swift */; };
 		1AA319531A5A1D0D00447D2C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1AA319521A5A1D0D00447D2C /* ViewController.swift */; };
 		1AA319561A5A1D0D00447D2C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AA319541A5A1D0D00447D2C /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		1A5004991A5A200600424EA6 /* ExpenseListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExpenseListViewController.swift; sourceTree = "<group>"; };
 		1AA3194B1A5A1D0D00447D2C /* Expenses.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Expenses.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1AA3194F1A5A1D0D00447D2C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1AA319501A5A1D0D00447D2C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -79,6 +81,7 @@
 			children = (
 				1AA319501A5A1D0D00447D2C /* AppDelegate.swift */,
 				1AA319521A5A1D0D00447D2C /* ViewController.swift */,
+				1A5004991A5A200600424EA6 /* ExpenseListViewController.swift */,
 				1AA319541A5A1D0D00447D2C /* Main.storyboard */,
 				1AA319571A5A1D0D00447D2C /* Images.xcassets */,
 				1AA319591A5A1D0D00447D2C /* LaunchScreen.xib */,
@@ -212,6 +215,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1A50049A1A5A200600424EA6 /* ExpenseListViewController.swift in Sources */,
 				1AA319531A5A1D0D00447D2C /* ViewController.swift in Sources */,
 				1AA319511A5A1D0D00447D2C /* AppDelegate.swift in Sources */,
 			);
@@ -405,6 +409,7 @@
 				1AA3196C1A5A1D0D00447D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		1AA3196D1A5A1D0D00447D2C /* Build configuration list for PBXNativeTarget "ExpensesTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				1AA3196F1A5A1D0D00447D2C /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
