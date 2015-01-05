@@ -2,6 +2,8 @@ import UIKit
 
 class ExpenseListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    // MARK: - UITableViewDataSource
+    
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 10;
     }
@@ -15,6 +17,8 @@ class ExpenseListViewController : UITableViewController, UITableViewDataSource, 
             return UITableViewCell(style: .Default, reuseIdentifier: cellReuseID);
         }
     }
+    
+    // MARK: - Private
     
     func configureCell(cell: UITableViewCell, indexPath: NSIndexPath) -> UITableViewCell {
         cell.textLabel.text = "Row \(indexPath.row)"
