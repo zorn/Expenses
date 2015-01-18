@@ -2,10 +2,30 @@ import UIKit
 
 class ExpenseListViewController : UITableViewController, UITableViewDataSource, UITableViewDelegate {
     
+    var expenseCollection = NSMutableArray()
+    
+    // MARK: - UIViewController
+    
+    override func viewDidLoad() {
+        self.expenseCollection.addObject(Expense(name: "Test Expense 1"))
+        self.expenseCollection.addObject(Expense(name: "Test Expense 2"))
+        self.expenseCollection.addObject(Expense(name: "Test Expense 3"))
+        self.expenseCollection.addObject(Expense(name: "Test Expense 4"))
+        super.viewDidLoad()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier {
+            if (identifier == "test") {
+                
+            }
+        }
+    }
+    
     // MARK: - UITableViewDataSource
     
     override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10;
+        return expenseCollection.count;
     }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -22,7 +42,8 @@ class ExpenseListViewController : UITableViewController, UITableViewDataSource, 
     // MARK: - Private
     
     func configureCell(cell: UITableViewCell, indexPath: NSIndexPath) -> UITableViewCell {
-        cell.textLabel.text = "Row \(indexPath.row)"
+        let expense = self.expenseCollection.objectAtIndex(indexPath.row) as Expense
+        cell.textLabel.text = expense.name
         return cell
     }
     
