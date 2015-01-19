@@ -2,15 +2,14 @@ import Foundation
 
 class SessionManager {
     
-    var mutableExpenseCollection = [Int: Expense]()
-    var nextExpenseID = 1 as Int
+    var mutableExpenseCollection = [Expense]()
     
     func expenses() -> [Expense] {
-        return [Expense](self.mutableExpenseCollection.values)
+        return self.mutableExpenseCollection
     }
     
     func addExpense(newExpense: Expense) {
-        
+        self.mutableExpenseCollection.append(newExpense)
     }
     
 }
