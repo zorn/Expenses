@@ -27,7 +27,13 @@ class SessionManagerTests: XCTestCase {
         } else {
             XCTFail("should always be able to find expense")
         }
-
+        
+        let tigerExpense = Expense(name: "Bought a tiger")
+        if let foundExpenseIndex = find(sessionManager.expenses(), tigerExpense) {
+            XCTFail("should never be able to find an expense I did not add")
+        } else {
+            XCTAssertTrue(true, "should not find expense")
+        }
     }
 
 
